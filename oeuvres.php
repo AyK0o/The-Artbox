@@ -111,18 +111,21 @@ $oeuvre=[];
 $id=2;
 function AfficherToutOeuvres(array $oeuvres){
     $id=1;
-    foreach($oeuvres as $oeuvres){
+    foreach($oeuvres as $oeuvres){?>
        
-        echo'<article class="oeuvre">';
+        <article class="oeuvre">
+        <?php
         echo'<a href=oeuvre.php?id='.$id.'>';
         echo'<img src="'.$oeuvres["img"].'">';
         echo'<h2>'.$oeuvres["titre"];  
         echo'<p class="description">'.$oeuvres["artiste"]; 
-        echo'</a>';
-        echo'</article>';
-        $id++;
+            ?>
+        </a>
+        </article>
+        <?php $id++;
     }
 }
+
 function AfficherOeuvre(array $oeuvres, $id){
     $oeuvre=[];
     foreach($oeuvres as $oeuvres){
@@ -138,17 +141,20 @@ function AfficherOeuvre(array $oeuvres, $id){
        
         
     }
-    echo '<article id="detail-oeuvre">';
-    echo '<div id="img-oeuvre">';
-    echo '<img src="'.$oeuvre["img"].'"alt="Aashaaheen Baadal">';
-    echo '</div>';
-    echo '<div id="contenu-oeuvre">';
-    echo '<h1>'.$oeuvre["titre"].'</h1>';  
-    echo '<p class="description">'.$oeuvre["artiste"].'</p>';
-    echo '<p class="description-complete">'.$oeuvre["description"].'</p>'; 
-    echo '</div>';
+    ?>
+    <article id="detail-oeuvre">
+        <div id="img-oeuvre">
+    <?php echo '<img src="'.$oeuvre["img"].'"alt="Aashaaheen Baadal">';?>
+        </div>
+        <div id="contenu-oeuvre">
+            <h1>
+                <?php echo $oeuvre["titre"];?>
+            </h1>  
+            <p class="description"<?php echo $oeuvre["artiste"];?>>
+            <p class="description-complete"<?php echo $oeuvre["description"]; ?>>
+        </div>
 
-    return $oeuvre;
+    <?php return $oeuvre;
 }
 
 ?>
