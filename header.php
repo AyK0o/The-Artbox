@@ -1,4 +1,6 @@
-
+<!doctype html>
+<html lang="fr">
+    
 <a href="index.php"><img src="img/logo.png" alt="Logo Artbox" id="logo"></a>
         <nav>
             <ul>

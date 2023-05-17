@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="fr">
-    <?php 
-    include("oeuvres.php");
-    ?>
+
+<?php include("oeuvres.php");?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
