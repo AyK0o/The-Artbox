@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+<?php include("fonctions.php");?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"

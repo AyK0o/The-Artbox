@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="fr">
 
+<!-- Chatgement des variables oeuvres et des fonctions-->
 <?php include("oeuvres.php");?>
+<?php include("fonctions.php");?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -12,16 +14,17 @@
 </head>
 <body>
     <header>
+        <!-- Apel de header.php-->
         <?php include ("header.php"); ?>
     </header>
     <main>
         <div id="liste-oeuvres">
-            <?php
-            AfficherToutOeuvres($oeuvres,); 
-            ?>
+            <!-- Apel de la fonction AfficherToutOeuvres -->
+            <?php AfficherToutOeuvres($oeuvres);  ?>
     </div>
     </main>
     <footer>
+        <!-- Apel de footer.php-->
         <?php include ("footer.php"); ?>
     </footer>
 </body>
