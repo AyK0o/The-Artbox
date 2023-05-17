@@ -15,9 +15,12 @@
     </header>
     <main>
         <?php 
-        include("oeuvres.php");
+        
 
-        AfficherOeuvre($oeuvres,$_GET['id']);
+        include("oeuvres.php");
+        if (Verif($oeuvres,$_GET["id"])){
+            AfficherOeuvre($oeuvres,$_GET["id"]);
+            }
         ?>
     </main>
 
