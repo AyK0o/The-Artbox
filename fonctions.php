@@ -1,31 +1,33 @@
 <?php //**************    FONCTIONS  ***************\\
 
 //initialisation des variables 
-$oeuvre=[];
-$id=0;
+//$oeuvre=[];
+//$id=0;
 // *************    Fonction AfficherToutOeuvres    *************\\ 
 // Parcours $oeuvres et cree un article contenant les attribut de chaques oeuvres pour chacune\\
 function AfficherToutOeuvres(array $oeuvres){
     $id=1;
-    foreach($oeuvres as $oeuvres){?>
+    foreach($oeuvres as $oeuvre){?>
        
         <article class="oeuvre">
         <?php
-        echo'<a href=oeuvre.php?id='.$id.'>';
-        echo'<img src="'.$oeuvres["img"].'">';
-        echo'<h2>'.$oeuvres["titre"];  
-        echo'<p class="description">'.$oeuvres["artiste"]; 
+        //echo'<a href=oeuvre.php?id='.$id.'>';
+        echo'<a href=oeuvre.php?id='.$oeuvre["id"].'>';
+        echo'<img src="'.$oeuvre["img"].'">';
+        echo'<h2>'.$oeuvre["titre"];  
+        echo'<p class="description">'.$oeuvre["artiste"]; 
             ?>
         </a>
         </article>
-        <?php $id++;
+        <?php
     }
 }
+
 // *************    Fonction AfficherOeuvre    *************\\ 
 // Parcours $oeuvres et affiche tout le contenu de chaques oeuvres \\
 function AfficherOeuvre(array $oeuvres, $id){
     $oeuvre=[];
-    foreach($oeuvres as $oeuvres){
+    foreach($oeuvres as $oeuvre){
         if($oeuvres["id"]==$id){
             
             $oeuvre= [

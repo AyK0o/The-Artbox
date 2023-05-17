@@ -1,6 +1,3 @@
-<!doctype html>
-<html lang="fr">
-    
 <?php
 //creation du tableau $oeuvres et initialisation de son contenu
 $oeuvres =[
